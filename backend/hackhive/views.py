@@ -48,6 +48,3 @@ class UpdateCalendarView(APIView):
                 return JsonResponse({'error': 'Calendar not found'})
         else:
             return JsonResponse({'error': 'No code provided'})
-    
-
-        

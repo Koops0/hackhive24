@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Calendar, Event
+from .models import Calendar
 
 #Calendar and Event serializers, event for workout
 class CalendarSerializer(serializers.ModelSerializer):
@@ -12,9 +12,4 @@ class UpdateCalendarSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Calendar
-        fields = '__all__'
-
-class EventSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Event
         fields = '__all__'
