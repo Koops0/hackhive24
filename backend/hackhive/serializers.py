@@ -7,6 +7,13 @@ class CalendarSerializer(serializers.ModelSerializer):
         model = Calendar
         fields = '__all__'
 
+class UpdateCalendarSerializer(serializers.ModelSerializer):
+    code = serializers.CharField(validators=[])
+
+    class Meta:
+        model = Calendar
+        fields = '__all__'
+
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
