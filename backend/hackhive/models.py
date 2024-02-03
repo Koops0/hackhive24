@@ -6,10 +6,19 @@ import random
 #Calendar Model that displays the entire calendar for fitness app.
 #Should display the calendar itself, events and details are for another class.
 
+class Event(models.Model):
+    title = models.CharField(max_length=100)
+    date = models.DateField()
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+    
 class Calendar(models.Model):
     month = models.PositiveIntegerField()
     year = models.PositiveIntegerField()
-    events = models.ManyToManyField('Event', related_name='calendar_events', blank=True)
+    #events from Event model
+    events = models.ManyToManyField(Event, blank=True)
 
     def __str__(self):
         return f"{self.get_month_display()} {self.year}"
@@ -27,11 +36,3 @@ class Calendar(models.Model):
             self.month = 1
             self.year += 1
         self.save()
-
-class Event(models.Model):
-    title = models.CharField(max_length=100)
-    date = models.DateField()
-    description = models.TextField()
-
-    def __str__(self):
-        return self.title
