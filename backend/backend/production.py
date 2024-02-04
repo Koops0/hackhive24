@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "hackhive.apps.HackhiveConfig",
     "rest_framework",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [

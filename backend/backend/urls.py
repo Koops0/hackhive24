@@ -16,8 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
+from hackhive import views
+
+router = routers.DefaultRouter()
+router.register(r'calendar', views.CalendarView, 'calendar')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('hackhive.urls')),
+    path('api/', include(router.urls)),
 ]

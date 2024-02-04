@@ -14,6 +14,7 @@ class Calendar(models.Model):
     year = models.PositiveIntegerField()
     #For events, make a textbox for events, and then display them on the calendar.
     description = models.TextField(max_length=280, default='Put workouts here')
+    completed = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.get_month_display()} {self.year}"
