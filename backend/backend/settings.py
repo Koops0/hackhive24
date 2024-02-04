@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-pty#-0#q%q_&qs6_eumuge2^uwh*ief1dsf1d_pqbvq4y7(sw2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['hackhivefitnessapp.azurewebsites.net', '40.69.106.99', '127.0.0.1', 'localhost']
 

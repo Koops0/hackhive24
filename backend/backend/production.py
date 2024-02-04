@@ -23,7 +23,7 @@ from .settings import BASE_DIR
 SECRET_KEY = "django-insecure-pty#-0#q%q_&qs6_eumuge2^uwh*ief1dsf1d_pqbvq4y7(sw2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
