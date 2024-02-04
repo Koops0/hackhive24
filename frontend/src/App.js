@@ -11,6 +11,9 @@ class App extends Component {
       modal: false,
       activeItem: {
         title: "",
+        month: 1,
+        day: 1,
+        year: "",
         description: "",
         completed: false,
       },
@@ -53,7 +56,7 @@ class App extends Component {
   };
 
   createItem = () => {
-    const item = { title: "", description: "", completed: false };
+    const item = { title: "", month: 1, day: 1, year: "", description: "", completed: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
@@ -129,7 +132,7 @@ class App extends Component {
   render() {
     return (
       <main className="container">
-        <h1 className="text-white text-uppercase text-center my-4">workout app</h1>
+        <h1 className="text-white text-uppercase text-center my-4">Workout Application</h1>
         <div className="row">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
