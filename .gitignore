@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.spec
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media
+
+# Virtual environment
+venv/
+ENV/
+
+# JavaScript / Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+yarn-debug.log*
+.jest/
+coverage/
+
+# React
+/build/
+
+# Environment variables
+.env
+
+# IDE - Visual Studio Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
